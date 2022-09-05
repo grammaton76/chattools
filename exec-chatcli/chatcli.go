@@ -15,9 +15,7 @@ var log slogger.Logger
 
 var Config shared.Configuration
 
-var Cli CliArgs
-
-type CliArgs struct {
+var Cli struct {
 	Inifile      string
 	ReadOnly     bool
 	Debug        bool
@@ -38,9 +36,7 @@ type CliArgs struct {
 	LabelIfReply string
 }
 
-var Global SharedVars
-
-type SharedVars struct {
+var Global struct {
 	Chat     *shared.ChatHandle
 	ChatType shared.ChatType
 	ReadOnly bool
