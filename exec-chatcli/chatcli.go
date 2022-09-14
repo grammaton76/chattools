@@ -176,7 +176,7 @@ func main() {
 			if err != nil {
 				log.Printf("Inserted chat, but error opening statefile '%s': '%s'\n", Cli.IdFile, err)
 			} else {
-				f.Write([]byte(fmt.Sprintf("%d", *ChatId)))
+				f.Write([]byte(fmt.Sprintf("%d", ChatId.UpdateId)))
 				f.Close()
 			}
 		}
