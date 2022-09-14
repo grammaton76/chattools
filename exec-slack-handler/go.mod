@@ -3,11 +3,11 @@ module slack-handler
 go 1.18
 
 require (
-	github.com/grammaton76/g76golib v0.0.0-20220819101206-536739642b3a
-	github.com/grammaton76/g76golib/shared v0.0.0-20220819101206-536739642b3a
-	github.com/grammaton76/g76golib/sjson v0.0.0-20220819101206-536739642b3a
-	github.com/grammaton76/g76golib/slogger v0.0.0-20220819101206-536739642b3a
-	github.com/slack-go/slack v0.11.2
+	github.com/grammaton76/g76golib/chatoutput/sc_slack v0.0.0-20220914095524-545fd2d9a476
+	github.com/grammaton76/g76golib/shared v0.0.0-20220914073217-f3a991595f6a
+	github.com/grammaton76/g76golib/sjson v0.0.0-20220914071039-8c1f5938db97
+	github.com/grammaton76/g76golib/slogger v0.0.0-20220914072753-2056b11e976b
+	github.com/slack-go/slack v0.11.3
 )
 
 require (
@@ -16,7 +16,6 @@ require (
 	github.com/go-ini/ini v1.67.0 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
-	github.com/grammaton76/g76golib/simage v0.0.0-20220819100434-bb2ae1da5554 // indirect
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 // indirect
 	github.com/lib/pq v1.10.6 // indirect
 	github.com/papertrail/go-tail v0.0.0-20180509224916-973c153b0431 // indirect
