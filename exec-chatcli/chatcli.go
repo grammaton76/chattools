@@ -100,6 +100,8 @@ func LoadConfigValues(inifile string) {
 
 func InitAndConnect() {
 	slogger.SetLogger(&log)
+	shared.SetLogger(&log)
+	log.Init()
 	if Cli.Debug {
 		log.SetThreshold(slogger.DEBUG)
 	}
