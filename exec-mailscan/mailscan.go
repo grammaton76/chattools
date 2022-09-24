@@ -5,6 +5,14 @@ package main
 create table postedmails (id serial primary key, seenat timestamp with time zone, label varchar(60) not null, mailid varchar(120) not null);
 create table mailparsers (id serial not null primary key, label varchar(30), chathandle varchar(20), channel varchar(80), sender varchar(80), enabled bool default true, code text);
 
+CREATE TABLE public.mailwatch (
+    label character varying(60) NOT NULL,
+    lastactive timestamp with time zone
+);
+
+ALTER TABLE ONLY public.mailwatch
+    ADD CONSTRAINT mailwatch_pkey PRIMARY KEY (label);
+
 */
 
 import (
@@ -12,8 +20,8 @@ import (
 	"flag"
 	"fmt"
 	_ "github.com/grammaton76/g76golib/chatoutput/sc_dbtable"
+	_ "github.com/grammaton76/g76golib/chatoutput/sc_slack"
 	"github.com/grammaton76/g76golib/shared"
-	"github.com/grammaton76/g76golib/simage"
 	"github.com/grammaton76/g76golib/sjson"
 	"github.com/grammaton76/g76golib/slogger"
 	"github.com/microcosm-cc/bluemonday"
@@ -133,7 +141,6 @@ var Global struct {
 }
 
 func LoadConfigValues(inifile string) {
-	simage.SetLogger(&log)
 	shared.SetLogger(&log)
 	OtherIni := flag.String("inifile", "", "Specify an INI file for settings")
 	SkipPid := flag.Bool("skippid", false, "Skip the PID file check")
@@ -224,6 +231,7 @@ func LoadConfigValues(inifile string) {
 }
 
 func InitAndConnect() {
+	log.Init()
 	shared.SetLogger(&log)
 	Global.Sanitizer = bluemonday.StrictPolicy()
 	ThreadPurpose := shared.NewThreadPurpose()
@@ -665,7 +673,7 @@ func (Watch *MailWatch) ExecJSForMail(Code string, Msg *MailMessage) {
 				Msg.Uid)
 		} else {
 			if Watch.Target == nil {
-				Watch.Target = Global.Chat.ErrorChannel
+				Watch.Target = Global.Chat.OutputChannel
 			}
 			ChatMsg := shared.NewChatMessage()
 			ChatMsg.Segments = Response
@@ -678,7 +686,7 @@ func (Watch *MailWatch) ExecJSForMail(Code string, Msg *MailMessage) {
 }
 
 func main() {
-	LoadConfigValues("/data/baytor/mailscan.ini")
+	LoadConfigValues("/data/config/mailscan.ini")
 	InitAndConnect()
 	//	defer Global.MailDb.Close()
 	//	defer Global.GsoDb.Close()
