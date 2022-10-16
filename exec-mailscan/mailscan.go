@@ -126,7 +126,7 @@ var Global struct {
 	Sanitizer     *bluemonday.Policy
 	ExtractMailTo string
 	ReadOnly      bool
-	TestOnly      string
+	Diag          string
 	MailAccounts  string
 	MailDb        *shared.DbHandle
 	Mailboxes     []*MailAccount
@@ -144,14 +144,14 @@ func LoadConfigValues(inifile string) {
 	shared.SetLogger(&log)
 	OtherIni := flag.String("inifile", "", "Specify an INI file for settings")
 	SkipPid := flag.Bool("skippid", false, "Skip the PID file check")
-	TestOnly := flag.String("testonly", "", "Designate a specific function to test")
+	Diag := flag.String("diag", "", "Designate a specific function to test")
 	Debug := flag.Bool("debug", false, "Enable verbose debugging.")
 	MailAccounts := flag.String("mailaccounts", "", "ini stanzas defining the accounts (comma).")
 	ExtractMailTo := flag.String("extractmailto", "", "Extract the matched email as [prefix]")
 	JsonMode := flag.Bool("jsonmode", false, "If set, we're doing offline tests against json from stdin.")
 	flag.Parse()
 	Cli.Inifile = *OtherIni
-	Global.TestOnly = *TestOnly
+	Global.Diag = *Diag
 	Cli.Debug = *Debug
 	if *SkipPid {
 		Cli.SkipPid = true
@@ -689,7 +689,27 @@ func main() {
 	LoadConfigValues("/data/config/mailscan.ini")
 	InitAndConnect()
 	//	defer Global.MailDb.Close()
-	//	defer Global.GsoDb.Close()
+	switch Global.Diag {
+	case "chat":
+		log.Printf("SendDefaultf testing:\n")
+		Global.Chat.SendDefaultf("MailScan testing SendDefaultf call - log message worked\n")
+		log.Printf("SendError testing")
+		Global.Chat.SendError("MailScan testing ChatError call - error message worked\n")
+		log.Printf("Segmented chat output in progress.\n")
+		ChatMsg := shared.NewChatMessage()
+		ChatMsg.Message = "Core text message"
+		ChatMsg.Segments = []shared.MsgSegment{{
+			Itemtype: shared.SEGTYPE_TEXT,
+			Text:     "Testing segmented chat message.\n",
+		}}
+		_, err := Global.Chat.OutputChannel.Send(ChatMsg)
+		log.ErrorIff(err, "sending multi segment chat")
+		log.Printf("Sent all chat messages.\n")
+		os.Exit(0)
+	default:
+		log.Fatalf("Unknown diag mode '%s' specified\n", Global.Diag)
+	case "":
+	}
 	if Cli.OfflineJson != nil {
 		J := Cli.OfflineJson
 		Js := J.KeyString("jscode")
