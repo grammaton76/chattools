@@ -2,7 +2,7 @@ package main
 
 /*
 
-create table postedmails (id serial primary key, seenat timestamp with time zone, label varchar(60) not null, mailid varchar(120) not null);
+create table postedmails (id serial primary key, seenat timestamp with time zone, label varchar(60) not null, mailid varchar(120) not null, retained text);
 create table mailparsers (id serial not null primary key, label varchar(30), chathandle varchar(20), channel varchar(80), sender varchar(80), enabled bool default true, code text);
 
 CREATE TABLE public.mailwatch (
