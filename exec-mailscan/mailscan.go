@@ -414,7 +414,7 @@ loop:
 		//err = client.StartTLS("imap.gmail.com")
 		log.FatalIff(err, "StartTLS failure")
 		err = client.Login(Acct.Username, Acct.Password)
-		log.FatalIff(err, "Login failure")
+		log.FatalIff(err, "Login failure on %s", Acct.Identifier())
 		_, err = client.Select("INBOX")
 		log.FatalIff(err, "Error selecting INBOX")
 		log.Infof("Mailbox rescan for %s\n", Acct.Identifier())
@@ -675,8 +675,7 @@ func (Watch *MailWatch) ExecJSForMail(Code string, Msg *MailMessage) {
 			if Watch.Target == nil {
 				Watch.Target = Global.Chat.OutputChannel
 			}
-			ChatMsg := shared.NewChatMessage()
-			ChatMsg.Segments = Response
+			ChatMsg := Response.CompileToMsg(Watch.Target)
 			_, err = Watch.Target.Send(ChatMsg)
 			log.FatalIff(err, "Sending final chat to '%s'", Watch.Target.Identifier())
 		}
