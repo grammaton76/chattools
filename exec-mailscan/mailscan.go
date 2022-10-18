@@ -414,7 +414,10 @@ loop:
 		//err = client.StartTLS("imap.gmail.com")
 		log.FatalIff(err, "StartTLS failure")
 		err = client.Login(Acct.Username, Acct.Password)
-		log.FatalIff(err, "Login failure on %s", Acct.Identifier())
+		if err != nil {
+			log.Errorf("Login failure on %s: %s", Acct.Identifier(), err)
+			continue
+		}
 		_, err = client.Select("INBOX")
 		log.FatalIff(err, "Error selecting INBOX")
 		log.Infof("Mailbox rescan for %s\n", Acct.Identifier())
