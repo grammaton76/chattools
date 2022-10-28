@@ -1,8 +1,8 @@
 go 1.18
 
 use (
-../../pkg/chat_output/sc_dbtable
-../../pkg/chat_output/sc_slack
+../../../chattools/pkg/chat_output/sc_dbtable
+../../../chattools/pkg/chat_output/sc_slack
     ../../../g76golib/pkg/shared
     ../../../g76golib/pkg/sjson
     ../../../g76golib/pkg/slogger

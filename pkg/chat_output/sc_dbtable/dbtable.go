@@ -1,4 +1,4 @@
-package main
+package sc_dbtable
 
 import (
 	"database/sql"
