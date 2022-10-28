@@ -1,4 +1,4 @@
-module github.com/grammaton76/g76golib/pkg/chat_output/sc_slack
+module github.com/grammaton76/chattools/pkg/chat_output/sc_slack
 
 go 1.18
 
