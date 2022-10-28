@@ -1,0 +1,2 @@
+genpacket();
+reply(delegate("packetdump.pl", env['shellargs']));

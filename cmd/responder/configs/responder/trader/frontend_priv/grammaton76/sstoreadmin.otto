@@ -1,0 +1,3 @@
+chaterror("error channel\n");
+chatlog("log channel\n");
+//reply(delegate("sstoreadmin.pl", env['shellargs']));
