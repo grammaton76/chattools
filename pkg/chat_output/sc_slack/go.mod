@@ -1,11 +1,8 @@
-module github.com/grammaton76/g76golib/chatoutput/sc_slack
+module github.com/grammaton76/g76golib/pkg/chat_output/sc_slack
 
 go 1.18
 
 require (
-	github.com/grammaton76/g76golib/shared v0.0.0-20220914073217-f3a991595f6a
-	github.com/grammaton76/g76golib/sjson v0.0.0-20220914071039-8c1f5938db97
-	github.com/grammaton76/g76golib/slogger v0.0.0-20220914072753-2056b11e976b
 	github.com/slack-go/slack v0.11.3
 )
 

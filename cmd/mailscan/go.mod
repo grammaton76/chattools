@@ -3,11 +3,6 @@ module mailscan
 go 1.18
 
 require (
-	github.com/grammaton76/g76golib v0.0.0-20220819080740-2f2d8de3c02e
-	github.com/grammaton76/g76golib/chatoutput/sc_dbtable v0.0.0-20220829102309-49fba581ff6f
-	github.com/grammaton76/g76golib/shared v0.0.0-20220819094954-195573b641dc
-	github.com/grammaton76/g76golib/sjson v0.0.0-20220829102309-49fba581ff6f
-	github.com/grammaton76/g76golib/slogger v0.0.0-20220829102309-49fba581ff6f
 	github.com/microcosm-cc/bluemonday v1.0.20
 	github.com/robertkrimen/otto v0.0.0-20211024170158-b87d35c0b86f
 	github.com/veqryn/go-email v0.0.0-20200124140746-a72ac14e358c

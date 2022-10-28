@@ -1,4 +1,4 @@
-module github.com/grammaton76/g76golib/chatoutput/sc_notify
+module github.com/grammaton76/chattools/pkg/chat_output/sc_notify
 
 go 1.18
 

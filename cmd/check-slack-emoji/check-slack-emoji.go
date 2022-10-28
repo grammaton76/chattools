@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	resty "github.com/go-resty/resty/v2"
-	_ "github.com/grammaton76/g76golib/chatoutput/sc_dbtable"
+	_ "github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable"
 	"github.com/grammaton76/g76golib/shared"
 	"github.com/grammaton76/g76golib/sjson"
 	"github.com/grammaton76/g76golib/slogger"

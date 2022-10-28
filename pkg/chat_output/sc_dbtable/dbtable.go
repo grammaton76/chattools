@@ -1,10 +1,10 @@
-package sc_dbtable
+package main
 
 import (
 	"database/sql"
 	"fmt"
-	"github.com/grammaton76/g76golib/shared"
-	"github.com/grammaton76/g76golib/slogger"
+	"github.com/grammaton76/g76golib/pkg/shared"
+	"github.com/grammaton76/g76golib/pkg/slogger"
 	"time"
 )
 

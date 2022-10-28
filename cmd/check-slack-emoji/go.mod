@@ -2,13 +2,9 @@ module check-slack-emoji
 
 go 1.19
 
-//replace github.com/grammaton76/g76golib/shared => ../../g76golib/shared
-
-//replace github.com/grammaton76/g76golib/chatoutput/sc_dbtable => ../../g76golib/chatoutput/sc_dbtable
-
 require (
 	github.com/go-resty/resty/v2 v2.7.0
-	github.com/grammaton76/g76golib/chatoutput/sc_dbtable v0.0.0-20220919102826-4d9ab69ab0cf
+	github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable v0.0.0-20220919102826-4d9ab69ab0cf
 	github.com/grammaton76/g76golib/shared v0.0.0-20220919102826-4d9ab69ab0cf
 	github.com/grammaton76/g76golib/sjson v0.0.0-20220919102826-4d9ab69ab0cf
 	github.com/grammaton76/g76golib/slogger v0.0.0-20220919102826-4d9ab69ab0cf

@@ -3,12 +3,6 @@ module chatcli
 go 1.18
 
 require (
-	github.com/grammaton76/g76golib/chatoutput/sc_dbtable v0.0.0-20220819101206-536739642b3a
-	github.com/grammaton76/g76golib/sjson v0.0.0-20220819101206-536739642b3a
-	github.com/grammaton76/g76golib/slogger v0.0.0-20220819101206-536739642b3a
-)
-
-require (
 	github.com/VividCortex/mysqlerr v1.0.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
 	github.com/go-ini/ini v1.67.0 // indirect

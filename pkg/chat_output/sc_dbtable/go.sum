@@ -11,6 +11,8 @@ github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfC
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/grammaton76/g76golib v0.0.0-20220819080740-2f2d8de3c02e h1:1GBwlNtjhVEAGJaDwb5Z3vTaZEPrDovk8Pd+lW4QE+M=
 github.com/grammaton76/g76golib v0.0.0-20220819080740-2f2d8de3c02e/go.mod h1:BPy4iBu+3anskPewJmBuoOw/KYJMtLFwwprSkyCtUsg=
+github.com/grammaton76/g76golib/pkg/slogger v0.0.0-20221028013837-32fb5f8779a7 h1:9DPFindOZobrCoUy6aQR0PWDpQNlukUtbjm4j021jzk=
+github.com/grammaton76/g76golib/pkg/slogger v0.0.0-20221028013837-32fb5f8779a7/go.mod h1:w3/pQe4Wb5qNCg8/9ifTf1FFq0moy/NqRAWKcuT7CVg=
 github.com/grammaton76/g76golib/shared v0.0.0-20220819094954-195573b641dc h1:iOtthpw+JhU0t468JAkVlXo4vg+L5MCR9LSVaBKyqNU=
 github.com/grammaton76/g76golib/shared v0.0.0-20220819094954-195573b641dc/go.mod h1:NibkJtpTROOqZV13+NNRtFVNMpqlMqpKA9Xs/dWQmgY=
 github.com/grammaton76/g76golib/slogger v0.0.0-20220819094954-195573b641dc h1:a3hMlijQnsXI37fB3kxLsoWyXeVY3dPjYCb30f+K/V0=

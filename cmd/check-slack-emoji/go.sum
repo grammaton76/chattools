@@ -34,8 +34,6 @@ github.com/google/pprof v0.0.0-20190515194954-54271f7e092f/go.mod h1:zfwlbNMJ+OI
 github.com/google/pprof v0.0.0-20190908185732-236ed259b199/go.mod h1:zfwlbNMJ+OItoe0UupaVj+oy1omPYYDuagoSzA8v9mc=
 github.com/google/uuid v1.1.1/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/gorilla/websocket v1.2.0/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
-github.com/grammaton76/g76golib/chatoutput/sc_dbtable v0.0.0-20220919102826-4d9ab69ab0cf h1:kEMcshy44puPJ/yPJuXz/oQUpJZIR891zjRQVLjzbms=
-github.com/grammaton76/g76golib/chatoutput/sc_dbtable v0.0.0-20220919102826-4d9ab69ab0cf/go.mod h1:RT8MhI8XI/Z8uQvzDS1opZ88UpF/44XTgsTmyp8HtzU=
 github.com/grammaton76/g76golib/sjson v0.0.0-20220905105145-df38ebe511c0/go.mod h1:QuuOfWtkVUBqPrlq9d6bD9tdgk9ERAmk7hOZl/bpIKQ=
 github.com/grammaton76/g76golib/sjson v0.0.0-20220919102826-4d9ab69ab0cf h1:KA70lBYXvaQWp9lqkpvCrb4E+DZMZFWZRgTddC8IdIk=
 github.com/grammaton76/g76golib/sjson v0.0.0-20220919102826-4d9ab69ab0cf/go.mod h1:QuuOfWtkVUBqPrlq9d6bD9tdgk9ERAmk7hOZl/bpIKQ=

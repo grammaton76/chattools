@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	_ "github.com/grammaton76/g76golib/chatoutput/sc_dbtable"
-	"github.com/grammaton76/g76golib/shared"
-	"github.com/grammaton76/g76golib/sjson"
-	"github.com/grammaton76/g76golib/slogger"
+	_ "github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable"
+	"github.com/grammaton76/g76golib/pkg/shared"
+	"github.com/grammaton76/g76golib/pkg/sjson"
+	"github.com/grammaton76/g76golib/pkg/slogger"
 	"os"
 	"time"
 )

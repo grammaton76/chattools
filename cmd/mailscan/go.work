@@ -1,10 +1,10 @@
 go 1.18
 
 use (
-    ../../g76golib/chatoutput/sc_dbtable
-    ../../g76golib/chatoutput/sc_slack
-    ../../g76golib/shared
-    ../../g76golib/sjson
-    ../../g76golib/slogger
+../../pkg/chat_output/sc_dbtable
+../../pkg/chat_output/sc_slack
+    ../../../g76golib/pkg/shared
+    ../../../g76golib/pkg/sjson
+    ../../../g76golib/pkg/slogger
     .
 )
