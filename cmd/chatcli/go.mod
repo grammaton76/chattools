@@ -7,7 +7,7 @@ replace github.com/grammaton76/g76golib/pkg/sjson => ../../../g76golib/pkg/sjson
 replace github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable => ../../pkg/chat_output/sc_dbtable
 
 require (
-	github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable v0.0.0-00010101000000-000000000000
+	github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable v0.0.0-20221028045721-83ccc654b8d3
 	github.com/grammaton76/g76golib/pkg/shared v0.0.0-20221028045618-a4c734ae155b
 	github.com/grammaton76/g76golib/pkg/sjson v0.0.0-00010101000000-000000000000
 	github.com/grammaton76/g76golib/pkg/slogger v0.0.0-20221028045618-a4c734ae155b
