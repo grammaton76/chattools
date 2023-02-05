@@ -29,6 +29,8 @@ github.com/grammaton76/g76golib/pkg/shared v0.0.0-20221028045618-a4c734ae155b h1
 github.com/grammaton76/g76golib/pkg/shared v0.0.0-20221028045618-a4c734ae155b/go.mod h1:PVAgzb1/vcBPeyaPLmhpU377ZTs8N0/pLpQPm28p+SE=
 github.com/grammaton76/g76golib/pkg/sjson v0.0.0-20221028045618-a4c734ae155b h1:SDTrOqBNWzsiSGAahwcdbiDunCPl/lYSzAnBE53brFI=
 github.com/grammaton76/g76golib/pkg/sjson v0.0.0-20221028045618-a4c734ae155b/go.mod h1:6eXWG0xICVouDpYWMDDfJxBNYeq8phi/yQjJKwNg9II=
+github.com/grammaton76/g76golib/pkg/sjson v0.0.0-20221028094241-2ce288197389 h1:GQ/7Rug3oRYr7SW9+aVhyayXrSSIbLdcwow/96jndLI=
+github.com/grammaton76/g76golib/pkg/sjson v0.0.0-20221028094241-2ce288197389/go.mod h1:6eXWG0xICVouDpYWMDDfJxBNYeq8phi/yQjJKwNg9II=
 github.com/grammaton76/g76golib/pkg/slogger v0.0.0-20221028045618-a4c734ae155b h1:hMNJmWKb5Ghp3vkAOyUZ2D1Blk5frRsZeD+y+yJi+jY=
 github.com/grammaton76/g76golib/pkg/slogger v0.0.0-20221028045618-a4c734ae155b/go.mod h1:w3/pQe4Wb5qNCg8/9ifTf1FFq0moy/NqRAWKcuT7CVg=
 github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 h1:iQTw/8FWTuc7uiaSepXwyf3o52HaUYcV+Tu66S3F5GA=

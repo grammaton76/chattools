@@ -75,6 +75,7 @@ type MailMessage struct {
 	Account       string
 	Uid           string
 	Sender        string
+	SenderName    string
 	Recipient     string
 	MessageId     string
 	Subject       string
@@ -329,6 +330,7 @@ func NewMessageSummary(Msg string) *MailMessage {
 	M.Subject = h.Get("Subject")
 	M.Sender = ExtractFromBrackets(h.Get("From"))
 	M.Recipient = ExtractFromBrackets(h.Get("To"))
+	M.SenderName = ExtractFromBrackets(h.Get("To"))
 	M.Uid = ExtractFromBrackets(h.Get("Message-Id"))
 	M.DateStr = h.Get("Date")
 	if M.DateStr != "" {

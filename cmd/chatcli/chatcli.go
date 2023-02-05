@@ -42,7 +42,7 @@ var Global struct {
 	ReadOnly bool
 }
 
-func LoadConfigValues(inifile string) {
+func LoadConfigValues(inifiles ...string) {
 	slogger.SetLogger(&log)
 	OtherIni := flag.String("inifile", "", "Specify an INI file for settings")
 	ReadOnly := flag.Bool("readonly", false, "No writes to database or filesystem.")
@@ -93,9 +93,9 @@ func LoadConfigValues(inifile string) {
 	}
 	Global.ReadOnly = Cli.ReadOnly
 	if Cli.Inifile != "" {
-		inifile = Cli.Inifile
+		inifiles = []string{Cli.Inifile}
 	}
-	Config.SetDefaultIni(inifile).OrDie(fmt.Sprintf("Could not access ini '%s'\n", inifile))
+	Config.SetDefaultIni(inifiles).OrDie("")
 }
 
 func InitAndConnect() {
@@ -127,7 +127,7 @@ func InitAndConnect() {
 }
 
 func main() {
-	LoadConfigValues("/data/config/chatcli.ini")
+	LoadConfigValues("${CONFIG}/chatcli.ini", "/data/config/chatcli.ini")
 	InitAndConnect()
 	Msg := Global.Chat.NewMessage()
 	Msg.MsgType = Global.ChatType

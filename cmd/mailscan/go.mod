@@ -6,7 +6,7 @@ require (
 	github.com/grammaton76/chattools/pkg/chat_output/sc_dbtable v0.0.0-20221028050802-3624353bd583
 	github.com/grammaton76/chattools/pkg/chat_output/sc_slack v0.0.0-20221028050802-3624353bd583
 	github.com/grammaton76/g76golib/pkg/shared v0.0.0-20221028045618-a4c734ae155b
-	github.com/grammaton76/g76golib/pkg/sjson v0.0.0-20221028045618-a4c734ae155b
+	github.com/grammaton76/g76golib/pkg/sjson v0.0.0-20221028094241-2ce288197389
 	github.com/grammaton76/g76golib/pkg/slogger v0.0.0-20221028045618-a4c734ae155b
 	github.com/microcosm-cc/bluemonday v1.0.21
 	github.com/robertkrimen/otto v0.0.0-20221025135307-511d75fba9f8
